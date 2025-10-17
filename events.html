@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>الفعاليات - دليل فعاليات المدينة</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">دليل فعاليات المدينة</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navMain">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">الرئيسية</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="events.html">الفعاليات</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">عن الدليل</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">اتصل بنا</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container my-4">
+        <h2 class="mb-3">قائمة الفعاليات</h2>
+
+        <div class="row mb-3">
+            <div class="col-md-4 mb-2">
+                <input id="search-input" class="form-control" placeholder="ابحث باسم الفعالية أو الوصف">
+            </div>
+            <div class="col-md-3 mb-2">
+                <select id="category-select" class="form-select">
+                    <option value="">كل التصنيفات</option>
+                </select>
+            </div>
+
+            <div class="col-md-3 mb-2">
+                <select id="sort-select" class="form-select">
+                    <option value="date_asc">الأقرب أولاً</option>
+                    <option value="date_desc">الأحدث أولاً</option>
+                </select>
+            </div>
+            <div class="col-md-2 text-start mb-2">
+                <button id="clear-filters" class="btn btn-outline-secondary">مسح</button>
+            </div>
+        </div>
+
+        <div class="row" id="events-list">
+        </div>
+
+    </main>
+
+    <footer class="bg-dark text-white py-3">
+        <div class="container d-flex justify-content-between">
+            <div>© حقوق النشر 2025</div>
+            <div>البريد: abdulhadisahhar@gmail.com  </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
