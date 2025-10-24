@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>تفاصيل الفعالية</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+    <div class="container">
+      <a id="nav-title" class="navbar-brand fw-bold" href="index.html">دليل فعاليات المدينة</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navMain">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a id="nav-home" class="nav-link" href="index.html">الرئيسية</a></li>
+          <li class="nav-item"><a id="nav-events" class="nav-link" href="events.html">الفعاليات</a></li>
+          <li class="nav-item"><a id="nav-about" class="nav-link" href="about.html">عن الدليل</a></li>
+          <li class="nav-item"><a id="nav-contact" class="nav-link" href="contact.html">اتصل بنا</a></li>
+        </ul>
+
+        <!-- Language Switch -->
+        <div class="language-switch text-end mb-3">
+          <button onclick="setLanguage('ar')" class="btn btn-outline-secondary btn-sm">عربي</button>
+          <button onclick="setLanguage('en')" class="btn btn-outline-secondary btn-sm">English</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Event Details -->
+  <main class="container my-4" id="event-detail-container">
+    <!-- Content filled dynamically by main.js -->
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white py-3">
+    <div class="container d-flex justify-content-between align-items-center flex-wrap">
+      <div id="footer-copy">© حقوق النشر 2025 - دليل فعاليات المدينة</div>
+
+      <div class="d-flex gap-3 align-items-center">
+        <a href="#" class="text-white text-decoration-none"><i class="bi bi-instagram fs-4"></i></a>
+        <a href="#" class="text-white text-decoration-none"><i class="bi bi-facebook fs-4"></i></a>
+        <a href="#" class="text-white text-decoration-none"><i class="bi bi-envelope-fill fs-4"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- App JS -->
+  <script src="assets/js/main.js"></script>
+
+  <!-- Language Switch -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const lang = localStorage.getItem('lang') || 'ar';
+      document.documentElement.lang = lang;
+      document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+
+      const text = {
+        ar: {
+          title: "تفاصيل الفعالية - دليل فعاليات المدينة",
+          navTitle: "دليل فعاليات المدينة",
+          home: "الرئيسية",
+          events: "الفعاليات",
+          about: "عن الدليل",
+          contact: "اتصل بنا",
+          footer: "© حقوق النشر 2025 - دليل فعاليات المدينة"
+        },
+        en: {
+          title: "Event Details - City Events Guide",
+          navTitle: "City Events Guide",
+          home: "Home",
+          events: "Events",
+          about: "About",
+          contact: "Contact Us",
+          footer: "© 2025 City Events Guide"
+        }
+      };
+
+      const t = text[lang];
+      document.title = t.title;
+      document.getElementById('nav-title').textContent = t.navTitle;
+      document.getElementById('nav-home').textContent = t.home;
+      document.getElementById('nav-events').textContent = t.events;
+      document.getElementById('nav-about').textContent = t.about;
+      document.getElementById('nav-contact').textContent = t.contact;
+      document.getElementById('footer-copy').textContent = t.footer;
+    });
+  </script>
+</body>
+
+</html>

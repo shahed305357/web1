@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>اتصل بنا</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+    <div class="container">
+      <a id="nav-title" class="navbar-brand fw-bold" href="index.html">دليل فعاليات المدينة</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navMain">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a id="nav-home" class="nav-link" href="index.html">الرئيسية</a></li>
+          <li class="nav-item"><a id="nav-events" class="nav-link" href="events.html">الفعاليات</a></li>
+          <li class="nav-item"><a id="nav-about" class="nav-link" href="about.html">عن الدليل</a></li>
+          <li class="nav-item"><a id="nav-contact" class="nav-link" href="contact.html">اتصل بنا</a></li>
+        </ul>
+
+        <!-- Language Switch -->
+        <div class="language-switch text-end mb-3">
+          <button onclick="setLanguage('ar')" class="btn btn-outline-secondary btn-sm">عربي</button>
+          <button onclick="setLanguage('en')" class="btn btn-outline-secondary btn-sm">English</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main -->
+  <main class="container my-4">
+    <h2 id="page-title" class="mb-4">اتصل بنا</h2>
+
+    <form id="contact-form" novalidate>
+      <div class="mb-3">
+        <label id="label-name" class="form-label">الاسم</label>
+        <input id="contact-name" class="form-control" required>
+      </div>
+      <div class="mb-3">
+        <label id="label-email" class="form-label">البريد الإلكتروني</label>
+        <input id="contact-email" class="form-control" type="email" required>
+      </div>
+      <div class="mb-3">
+        <label id="label-message" class="form-label">الرسالة</label>
+        <textarea id="contact-message" class="form-control" rows="5" required></textarea>
+      </div>
+      <button id="btn-send" class="btn btn-primary" type="submit">إرسال</button>
+    </form>
+
+    <!-- Extra contact info -->
+    <section class="mt-5">
+      <h4 id="extra-title" class="mb-3">معلومات تواصل إضافية</h4>
+      <ul class="list-unstyled">
+        <li><strong id="phone-label">📞 الهاتف:</strong> +971 50 123 4567</li>
+        <li><strong id="altmail-label">✉️ البريد البديل:</strong> info@cityevents.ae</li>
+        <li><strong id="address-label">📍 العنوان:</strong> سوريا - دمشق - بناء المحافظة _ مكتب رقم 502</li>
+      </ul>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white py-3">
+    <div class="container d-flex justify-content-between align-items-center flex-wrap">
+      <div id="footer-copy">© حقوق النشر 2025 - دليل فعاليات المدينة</div>
+      <div class="d-flex gap-3 align-items-center">
+        <a href="#" class="text-white text-decoration-none"><i class="bi bi-instagram fs-4"></i></a>
+        <a href="#" class="text-white text-decoration-none"><i class="bi bi-facebook fs-4"></i></a>
+        <a href="#" class="text-white text-decoration-none"><i class="bi bi-envelope-fill fs-4"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+
+  <!-- Language Switch -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const lang = localStorage.getItem('lang') || 'ar';
+      document.documentElement.lang = lang;
+      document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+
+      const text = {
+        ar: {
+          title: "اتصل بنا - دليل فعاليات المدينة",
+          navTitle: "دليل فعاليات المدينة",
+          home: "الرئيسية",
+          events: "الفعاليات",
+          about: "عن الدليل",
+          contact: "اتصل بنا",
+          pageTitle: "اتصل بنا",
+          name: "الاسم",
+          email: "البريد الإلكتروني",
+          message: "الرسالة",
+          send: "إرسال",
+          extra: "معلومات تواصل إضافية",
+          phone: "📞 الهاتف:",
+          altmail: "✉️ البريد البديل:",
+          address: "📍 العنوان:",
+          footer: "© حقوق النشر 2025 - دليل فعاليات المدينة"
+        },
+        en: {
+          title: "Contact Us - City Events Guide",
+          navTitle: "City Events Guide",
+          home: "Home",
+          events: "Events",
+          about: "About",
+          contact: "Contact Us",
+          pageTitle: "Contact Us",
+          name: "Name",
+          email: "Email",
+          message: "Message",
+          send: "Send",
+          extra: "Additional Contact Info",
+          phone: "📞 Phone:",
+          altmail: "✉️ Alternate Email:",
+          address: "📍 Address:",
+          footer: "© 2025 City Events Guide"
+        }
+      };
+
+      const t = text[lang];
+      document.title = t.title;
+      document.getElementById('nav-title').textContent = t.navTitle;
+      document.getElementById('nav-home').textContent = t.home;
+      document.getElementById('nav-events').textContent = t.events;
+      document.getElementById('nav-about').textContent = t.about;
+      document.getElementById('nav-contact').textContent = t.contact;
+
+      document.getElementById('page-title').textContent = t.pageTitle;
+      document.getElementById('label-name').textContent = t.name;
+      document.getElementById('label-email').textContent = t.email;
+      document.getElementById('label-message').textContent = t.message;
+      document.getElementById('btn-send').textContent = t.send;
+      document.getElementById('extra-title').textContent = t.extra;
+      document.getElementById('phone-label').textContent = t.phone;
+      document.getElementById('altmail-label').textContent = t.altmail;
+      document.getElementById('address-label').textContent = t.address;
+      document.getElementById('footer-copy').textContent = t.footer;
+    });
+  </script>
+</body>
+
+</html>

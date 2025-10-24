@@ -1,0 +1,44 @@
+/* styles.css */
+/* اختيار هوية لونية بسيطة */
+:root {
+    --primary: #007bff;
+    --accent: #ff6b6b;
+    --bg: #f8f9fa;
+    --card: #ffffff;
+    --text: #222;
+    font-family: 'Cairo', sans-serif;
+}
+
+/* عام */
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Cairo', sans-serif;
+}
+
+/* Cards */
+.card-event {
+    transition: transform .18s ease, box-shadow .18s ease;
+}
+
+.card-event:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Badges */
+.badge-cat {
+    cursor: pointer;
+}
+
+/* Footer */
+footer {
+    font-size: .9rem;
+}
+
+/* Responsive tweaks إذا لزم */
+@media (max-width:768px) {
+    .navbar-brand img {
+        height: 32px;
+    }
+}

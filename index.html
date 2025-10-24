@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <!-- ===== معلومات الطلاب ===== -->
+  <div style="
+      background-color: #fff3f3;
+      border: 1px solid #ffcccc;
+      color: red;
+      font-weight: bold;
+      text-align: center;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 8px;
+  ">
+    <p style="margin: 0;">
+      أسماء الطلاب: آلاء الحرش (ID:alaa_198654) – رؤى جنيد (ID:Rouaa_250366) – همام داغستاني (ID:muhammad_homam_286023) – شهد جمعة (ID:shahed_)
+    </p>
+  </div>
+  <!-- ===== نهاية معلومات الطلاب ===== -->
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>دليل فعاليات المدينة</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/img/logo event.png">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+    <div class="container">
+
+      <!-- Brand -->
+      <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+        <img src="assets/img/logo event.png" alt="شعار الموقع" width="45" height="45"
+          class="shadow-sm" style="object-fit: cover;">
+        <span id="site-title" class="fw-bold fs-5">دليل فعاليات المدينة</span>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navMain">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a id="nav-home" class="nav-link" href="index.html">الرئيسية</a></li>
+          <li class="nav-item"><a id="nav-events" class="nav-link" href="events.html">الفعاليات</a></li>
+          <li class="nav-item"><a id="nav-about" class="nav-link" href="about.html">عن الدليل</a></li>
+          <li class="nav-item"><a id="nav-contact" class="nav-link" href="contact.html">اتصل بنا</a></li>
+        </ul>
+
+        <!-- Language Switch -->
+        <div class="language-switch text-end mb-3">
+          <button onclick="setLanguage('ar')" class="btn btn-outline-secondary btn-sm">عربي</button>
+          <button onclick="setLanguage('en')" class="btn btn-outline-secondary btn-sm">English</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container my-4">
+
+    <!-- Featured -->
+    <section id="featured-section" class="mb-4">
+      <h2 id="featured-title" class="mb-3">فعاليات بارزة هذا الأسبوع</h2>
+      <div id="featuredCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner" id="featured-carousel-inner"></div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#featuredCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#featuredCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
+    </section>
+
+    <!-- Categories -->
+    <section id="quick-cats" class="mb-4">
+      <h3 id="cats-title">التصنيفات السريعة</h3>
+      <div id="category-badges" class="d-flex gap-2 flex-wrap"></div>
+    </section>
+
+    <!-- Latest -->
+    <section id="latest-events">
+      <h3 id="latest-title" class="mb-3">أحدث الفعاليات</h3>
+      <div class="row" id="latest-cards"></div>
+      <div class="text-end mt-3">
+        <a id="view-all" href="events.html" class="btn btn-outline-primary">عرض كل الفعاليات</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white py-3">
+    <div class="container d-flex justify-content-between align-items-center flex-wrap">
+      <div id="footer-copy">© حقوق النشر 2025 - دليل فعاليات المدينة</div>
+
+      <div class="d-flex gap-3 align-items-center">
+        <a href="#" class="text-white text-decoration-none"><i class="bi bi-instagram fs-4"></i></a>
+        <a href="#" class="text-white text-decoration-none"><i class="bi bi-facebook fs-4"></i></a>
+        <a href="#" class="text-white text-decoration-none"><i class="bi bi-envelope-fill fs-4"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Main JS -->
+  <script src="assets/js/main.js"></script>
+
+  <!-- Language Text Switch -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const lang = localStorage.getItem('lang') || 'ar';
+      document.documentElement.lang = lang;
+      document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+
+      const text = {
+        ar: {
+          title: "دليل فعاليات المدينة",
+          home: "الرئيسية",
+          events: "الفعاليات",
+          about: "عن الدليل",
+          contact: "اتصل بنا",
+          featured: "فعاليات بارزة هذا الأسبوع",
+          cats: "التصنيفات السريعة",
+          latest: "أحدث الفعاليات",
+          viewAll: "عرض كل الفعاليات",
+          footer: "© حقوق النشر 2025 - دليل فعاليات المدينة"
+        },
+        en: {
+          title: "City Events Guide",
+          home: "Home",
+          events: "Events",
+          about: "About",
+          contact: "Contact Us",
+          featured: "Featured Events This Week",
+          cats: "Quick Categories",
+          latest: "Latest Events",
+          viewAll: "View All Events",
+          footer: "© 2025 City Events Guide"
+        }
+      };
+
+      const t = text[lang];
+
+      document.getElementById('site-title').textContent = t.title;
+      document.title = t.title;
+      document.getElementById('nav-home').textContent = t.home;
+      document.getElementById('nav-events').textContent = t.events;
+      document.getElementById('nav-about').textContent = t.about;
+      document.getElementById('nav-contact').textContent = t.contact;
+      document.getElementById('featured-title').textContent = t.featured;
+      document.getElementById('cats-title').textContent = t.cats;
+      document.getElementById('latest-title').textContent = t.latest;
+      document.getElementById('view-all').textContent = t.viewAll;
+      document.getElementById('footer-copy').textContent = t.footer;
+    });
+  </script>
+</body>
+
+</html>

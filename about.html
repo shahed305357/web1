@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>عن الدليل - دليل فعاليات المدينة</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/styles.css">
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+    <div class="container">
+      <a id="nav-title" class="navbar-brand fw-bold" href="index.html">دليل فعاليات المدينة</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navMain">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a id="nav-home" class="nav-link" href="index.html">الرئيسية</a></li>
+          <li class="nav-item"><a id="nav-events" class="nav-link" href="events.html">الفعاليات</a></li>
+          <li class="nav-item"><a id="nav-about" class="nav-link active" href="about.html">عن الدليل</a></li>
+          <li class="nav-item"><a id="nav-contact" class="nav-link" href="contact.html">اتصل بنا</a></li>
+        </ul>
+
+        <!-- Language Switch -->
+        <div class="language-switch text-end mb-3">
+          <button onclick="setLanguage('ar')" class="btn btn-outline-secondary btn-sm">عربي</button>
+          <button onclick="setLanguage('en')" class="btn btn-outline-secondary btn-sm">English</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="container my-5">
+
+    <!-- About -->
+    <section class="mb-5">
+      <h2 id="about-title" class="mb-3">نبذة عن الدليل</h2>
+      <p id="about-text">
+        "دليل فعاليات المدينة" هو منصة مجتمعية تهدف إلى جمع ونشر جميع الفعاليات الثقافية،
+        الرياضية، العائلية والفنية في مكان واحد. رؤيتنا هي بناء جسر بين المنظمين والجمهور،
+        ورسالتنا هي تمكين كل فرد من الوصول بسهولة إلى أنشطة مدينته والمشاركة فيها.
+      </p>
+    </section>
+
+    <!-- Team -->
+    <section class="mb-5">
+      <h2 id="team-title" class="mb-3">فريق العمل</h2>
+      <div class="row g-4">
+        <div class="col-6 col-md-3 text-center">
+          <img src="https://i.postimg.cc/Kc1tycHc/software-engineers-vector.webp" class="rounded-circle mb-2" alt="member">
+          <h6 id="member1-name">شهد جمعة</h6>
+          <small id="member1-role" class="text-muted">مدير المشروع</small>
+        </div>
+        <div class="col-6 col-md-3 text-center">
+          <img src="https://i.postimg.cc/QtGZxdJ0/software-engineers-concept-vector.jpg" class="rounded-circle mb-2" alt="member">
+          <h6 id="member2-name">آلاء الحرش</h6>
+          <small id="member2-role" class="text-muted">مصممة واجهة</small>
+        </div>
+        <div class="col-6 col-md-3 text-center">
+          <img src="https://i.postimg.cc/bw7B1FSP/concept-for-referral-program-vector.webp" class="rounded-circle mb-2" alt="member">
+          <h6 id="member3-name">أحمد داغستاني</h6>
+          <small id="member3-role" class="text-muted">مبرمج</small>
+        </div>
+        <div class="col-6 col-md-3 text-center">
+          <img src="https://i.postimg.cc/tJvrJrHP/180387-vetores-de-engenheiros-de-software-vetor.jpg" class="rounded-circle mb-2" alt="member">
+          <h6 id="member4-name">رؤى</h6>
+          <small id="member4-role" class="text-muted">تواصل مجتمعي</small>
+        </div>
+      </div>
+    </section>
+
+    <!-- Policies -->
+    <section>
+      <h2 id="policy-title" class="mb-3">سياسات نشر الفعاليات</h2>
+      <p id="policy-text">
+        نحن نشجع جميع الأفراد والجهات على تقديم فعالياتهم ليتم نشرها في الدليل. حرصًا على جودة
+        المحتوى، نعتمد السياسات التالية:
+      </p>
+      <ul id="policy-list">
+        <li>يجب أن تكون الفعالية عامة ومفتوحة للمجتمع.</li>
+        <li>تقديم التفاصيل الأساسية: العنوان، التاريخ، المكان، صورة.</li>
+        <li>الابتعاد عن أي محتوى مسيء أو مخالف للقوانين المحلية.</li>
+        <li>المراجعة والموافقة تتم من قِبل فريق التحرير قبل النشر.</li>
+      </ul>
+      <p id="policy-footer">
+        لتقديم فعالية، يرجى استخدام صفحة <a href="contact.html" id="contact-link">اتصل بنا</a> وإرسال تفاصيل
+        الحدث. سنقوم بمراجعتها والرد في أقرب وقت.
+      </p>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white py-3">
+    <div class="container d-flex justify-content-between align-items-center flex-wrap">
+      <div id="footer-copy">© حقوق النشر 2025 - دليل فعاليات المدينة</div>
+      <div class="d-flex gap-3 align-items-center">
+        <a href="#" class="text-white text-decoration-none"><i class="bi bi-instagram fs-4"></i></a>
+        <a href="#" class="text-white text-decoration-none"><i class="bi bi-facebook fs-4"></i></a>
+        <a href="#" class="text-white text-decoration-none"><i class="bi bi-envelope-fill fs-4"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+
+  <!-- Language Switch -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const lang = localStorage.getItem('lang') || 'ar';
+      document.documentElement.lang = lang;
+      document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+
+      const text = {
+        ar: {
+          title: "عن الدليل - دليل فعاليات المدينة",
+          navTitle: "دليل فعاليات المدينة",
+          home: "الرئيسية",
+          events: "الفعاليات",
+          about: "عن الدليل",
+          contact: "اتصل بنا",
+          aboutTitle: "نبذة عن الدليل",
+          aboutText:
+            '"دليل فعاليات المدينة" هو منصة مجتمعية تهدف إلى جمع ونشر جميع الفعاليات الثقافية، الرياضية، العائلية والفنية في مكان واحد. رؤيتنا هي بناء جسر بين المنظمين والجمهور، ورسالتنا هي تمكين كل فرد من الوصول بسهولة إلى أنشطة مدينته والمشاركة فيها.',
+          teamTitle: "فريق العمل",
+          member1Role: "مدير المشروع",
+          member2Role: "مصممة واجهة",
+          member3Role: "مبرمج",
+          member4Role: "تواصل مجتمعي",
+          policyTitle: "سياسات نشر الفعاليات",
+          policyText:
+            "نحن نشجع جميع الأفراد والجهات على تقديم فعالياتهم ليتم نشرها في الدليل. حرصًا على جودة المحتوى، نعتمد السياسات التالية:",
+          policyList: [
+            "يجب أن تكون الفعالية عامة ومفتوحة للمجتمع.",
+            "تقديم التفاصيل الأساسية: العنوان، التاريخ، المكان، صورة.",
+            "الابتعاد عن أي محتوى مسيء أو مخالف للقوانين المحلية.",
+            "المراجعة والموافقة تتم من قِبل فريق التحرير قبل النشر."
+          ],
+          policyFooter:
+            'لتقديم فعالية، يرجى استخدام صفحة <a href="contact.html">اتصل بنا</a> وإرسال تفاصيل الحدث. سنقوم بمراجعتها والرد في أقرب وقت.',
+          footer: "© حقوق النشر 2025 - دليل فعاليات المدينة"
+        },
+        en: {
+          title: "About - City Events Guide",
+          navTitle: "City Events Guide",
+          home: "Home",
+          events: "Events",
+          about: "About",
+          contact: "Contact Us",
+          aboutTitle: "About the Guide",
+          aboutText:
+            '"City Events Guide" is a community platform that gathers and shares all cultural, sports, family, and artistic events in one place. Our vision is to connect organizers with audiences and help everyone easily discover and participate in their city’s activities.',
+          teamTitle: "Our Team",
+          member1Role: "Project Manager",
+          member2Role: "UI Designer",
+          member3Role: "Developer",
+          member4Role: "Community Coordinator",
+          policyTitle: "Event Publishing Policies",
+          policyText:
+            "We encourage individuals and organizations to submit their events to be featured in the guide. To maintain quality, we follow these policies:",
+          policyList: [
+            "The event must be public and open to the community.",
+            "Provide basic details: title, date, venue, and image.",
+            "Avoid offensive or illegal content.",
+            "All submissions are reviewed and approved by our editorial team."
+          ],
+          policyFooter:
+            'To submit an event, please use the <a href="contact.html">Contact Us</a> page and send us the details. We’ll review and respond as soon as possible.',
+          footer: "© 2025 City Events Guide"
+        }
+      };
+
+      const t = text[lang];
+      document.title = t.title;
+      document.getElementById('nav-title').textContent = t.navTitle;
+      document.getElementById('nav-home').textContent = t.home;
+      document.getElementById('nav-events').textContent = t.events;
+      document.getElementById('nav-about').textContent = t.about;
+      document.getElementById('nav-contact').textContent = t.contact;
+
+      document.getElementById('about-title').textContent = t.aboutTitle;
+      document.getElementById('about-text').textContent = t.aboutText;
+      document.getElementById('team-title').textContent = t.teamTitle;
+      document.getElementById('member1-role').textContent = t.member1Role;
+      document.getElementById('member2-role').textContent = t.member2Role;
+      document.getElementById('member3-role').textContent = t.member3Role;
+      document.getElementById('member4-role').textContent = t.member4Role;
+      document.getElementById('policy-title').textContent = t.policyTitle;
+      document.getElementById('policy-text').textContent = t.policyText;
+      document.getElementById('policy-list').innerHTML = t.policyList.map(i => `<li>${i}</li>`).join('');
+      document.getElementById('policy-footer').innerHTML = t.policyFooter;
+      document.getElementById('footer-copy').textContent = t.footer;
+    });
+  </script>
+</body>
+
+</html>
